@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+body{
+  font-family: 'Playfair Display', serif;
+}
+
+
+#bodyLogin {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Playfair Display', serif;
+    background: rgb(235, 235, 235);
+    background-size: cover;
+}
+
+
+.search {
+  font-family: 'Playfair Display', serif;
+  width: 65%;
+  position: relative;
+  display: inline-block;
+}
+
+.searchTerm {
+font-family: 'Playfair Display', serif;
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 20px;
+  height: 30px;
+  outline: none;
+  color: #f2f2f2;
+}
+
+.searchTerm:focus{
+  color: rgb(0, 0, 0);
+}
+
+.searchButton {
+  position: absolute;  
+  width: 40px;
+  height: 42px;
+  border: 1px solid rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
+  text-align: center;
+  color: #f2f2f2;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: fixed;
+  display: inline-block;
+  top: 10px;
+}
+
+.logo{
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    width: 30%;
+    display: inline-block;
+}
+
+      //------------------------------------------------------------------------------------------------
+
+
+.formulario{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Playfair Display', serif;
+    
+}
+
+.panel{
+    padding: 20px;
+    background: f2f2f2;
+}
+      
+      //------------------------------------------------------------------------------------------------
+      .content{
+          display: inline-block;
+          margin-top: 50px;
+      }
+
+
+      .articulos{
+          margin-top: 50px;
+          padding: 20px;
+          font-family: 'Playfair Display', serif;
+          border-left: 1px solid #232323;
+      }
+
+/* CHECKLIST */
+mark {
+    background-color: transparent;
+    color: #232323;
+}
+
+.checkbox {
+    direction: rtl;
+    position: relative;
+    line-height: 0;
+}
+.checkbox:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+}
+.checkbox input,
+.checkbox .label,
+.checkbox .check {
+    display: inline-block;
+    vertical-align: middle;
+}
+.checkbox .label {
+    max-width: 200px;
+}
+.checkbox .check {
+    position: relative;
+}
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    border-color: #232323;
+}
+.checkbox input[type="checkbox"]:focus {
+    outline: 0;
+}
+.checkbox input[type="checkbox"]:checked + .check-container .check-off {
+    border-color: #ff7b0e;
+}
+
+.checkbox input[type="checkbox"]:checked + .check-container .check-on:after {
+    content: "✓";
+    color: #ff7b0e;
+    position: absolute;
+    font-size: 1em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.checkbox input[type="checkbox"] + .check-container {
+    width: auto;
+    position: relative;
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    top: 2px;
+    pointer-events: none;
+}
+
+.checkbox input[type="checkbox"] + .check-container .check-off {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 0;
+    border-radius: 2px;
+    border: 2px solid #232323;
+    transition: border-color ease 0.28s;
+}
+
+.task-list {
+    position: relative;
+    padding: 15px 25px;
+}
+.task-list mark {
+    color: #232323;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+.task-list time {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.task-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.task-list ul li {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    padding: 15px 0;
+    position: relative;
+    margin: 0;
+}
+.task-list ul li .label {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    margin-bottom: 2px;
+    line-height: 1.2;
+    direction: ltr;
+    text-align: left;
+    opacity: 1;
+    max-width: unset;
+}
+
+.task-list ul li.task-checked .label {
+    opacity: 0.5;
+}
+
+.task-list.current ul li {
+    border-top: 1px solid #b2b4b9;
+}
+
+.task-list.current ul li:first-child {
+    border-top: 0;
+}
+
+
+
+      //------------------------------------------------------------------------------------------------
+
+
+.btnLogin {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    *display: inline;
+    *zoom: 1;
+    padding: 4px 10px 4px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #252525;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+    background-color: #f5f5f5;
+}
+
+.btnLogin:hover,
+.btnLogin:active,
+.btnLogin.active,
+.btnLogin.disabled,
+.btnLogin[disabled] {
+    background-color: #e6e6e6;
+}
+
+.btnLogin-large {
+    padding: 9px 14px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.btnLogin:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #e6e6e6;
+    background-position: 0 -15px;
+    -webkit-transition: background-position 0.1s linear;
+    -moz-transition: background-position 0.1s linear;
+    -ms-transition: background-position 0.1s linear;
+    -o-transition: background-position 0.1s linear;
+    transition: background-position 0.1s linear;
+}
+
+.btnLogin-primary,
+.btnLogin-primary:hover {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+}
+
+.btnLogin-primary.active {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.btnLogin-primary {
+    background-color: #1f1f1f;
+    background-repeat: repeat-x;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr=#cdf24d, endColorstr=#bae240, GradientType=0);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    border: none;
+    font-size: 14pt;
+    border-radius: 20px;
+}
+
+.btnLogin-primary:hover,
+.btnLogin-primary:active,
+.btnLogin-primary.active,
+.btnLogin-primary.disabled,
+.btnLogin-primary[disabled] {
+    filter: none;
+    background-color: #1b7eff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0px 10px rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.btnLogin-block {
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+
+.landing{
+    background-size: cover;
+}
+
+.login {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width: 300px;
+    height: 300px;
+
+}
+
+.login h1 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.login input {
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    background: white;
+    border: none;
+    outline: none;
+    padding: 5px;
+    color: gray;
+    border: none;
+    font-size: 14pt;
+    border-radius: 20px;
+    transition: 1s;
+    text-align: center;
+}
+
+.login input:focus {
+    background-color: white;
+    transition: 1s;
+    color: #092756;
+    box-shadow: none;
+}
+
+.login .registro,
+.login .registro:active,
+.login.registro.active,
+.login .registro:disabled {
+    text-decoration: none;
+    color: #292929;
+}
+
+.registro:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.login .logo {
+    margin: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 15px 50px;
+}
+
+.login .subTexto {
+    font-family: 'Playfair Display light', serif;
+    text-align: center;
+    font-size: 12pt;
+    color: rgb(95, 95, 95);
+    padding-top: 10px;
+}
+
+
+.login .subHeader {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 25pt;
+    padding-bottom: 10px;
+}
+
+.login .registro .subHeader {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    padding: 20px 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0ox;
+
+}
+
+ p{
+    text-align: center;
+    font-weight: bold;
+}
+
+.registro{
+    text-align: center;
+}
+
+#bottomBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 11vh;
+    z-index: 999;
+}
+
+.icon-container {
+    width: 33.33%;
+    height: 12vh;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.icon-bottombar {
+    padding: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    fill: #a7a7a7;
+    transition: all .2s ease;
+    margin: 0;
+}
+
+#bottomBar .tabs {
+    display: none;
+}
+
+#bottomBar .icon-bottombar:hover {
+    fill: #2c7cff;
+}
+
+
+//------------------------------------------------------------------------------------------------
+.container {
+  margin: 60px auto;
+  width: 400px;
+  text-align: center;
+}
+
+.container .progress {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.progress {
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 16px;
+  border-radius: 4px;
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/*
+ * Note: using adjacent or general sibling selectors combined with
+ *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
+ *       See this article for more info and a potential fix:
+ *       https://css-tricks.com/webkit-sibling-bug/
+ */
+
+#five:checked ~ .progress > .progress-bar {
+  width: 5%;
+  background-color: #f63a0f;
+}
+
+#twentyfive:checked ~ .progress > .progress-bar {
+  width: 25%;
+  background-color: #f27011;
+}
+
+#fifty:checked ~ .progress > .progress-bar {
+  width: 50%;
+  background-color: #f2b01e;
+}
+
+#seventyfive:checked ~ .progress > .progress-bar {
+  width: 75%;
+  background-color: #f2d31b;
+}
+
+#onehundred:checked ~ .progress > .progress-bar {
+  width: 100%;
+  background-color: #86e01e;
+}
+
+.radio {
+  display: none;
+}
+
+.label {
+  display: inline-block;
+  margin: 0 5px 20px;
+  padding: 3px 8px;
+  color: #aaa;
+  text-shadow: 0 1px black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.radio:checked + .label {
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+}

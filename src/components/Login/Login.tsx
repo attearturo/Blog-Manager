@@ -6,27 +6,32 @@ interface Props {
     login: any;
     handleChangeEmail: any;
     handleChangePassword: any;
-    errorLogged:boolean
+    errorLogged:boolean;
+    goToRegister:any
 }
 
 const Login = (props: Props) => {
     return (
-        <section>
-            <div>
-                <h1>Login</h1>
-            </div>
-            <form onSubmit={props.login}>
-                <input type="email" placeholder="Correo" value={props.email} onChange={props.handleChangeEmail}/>
-                <input type="password" placeholder="Contraseña" value={props.password} onChange={props.handleChangePassword}/>
-                <button type="submit">Entrar</button>
+            <div id="login" className='landing'>
+                <div id="bodyLogin">
+            <form className='login' onSubmit={props.login}>
+                <h4 className='subHeader'>Welcome back!</h4>
+                <input id='usern' type="email" placeholder="Email" value={props.email} onChange={props.handleChangeEmail} required />
+                <input id='psw' type="password" placeholder="Password" value={props.password} onChange={props.handleChangePassword} required />
+                <button id='entrada' type="submit" className="btnLogin btnLogin-primary btnLogin-block btnLogin-large">Sign in</button>
+
+                <p className="subTexto">Hello, <a className="registro" href='#' onClick={props.goToRegister} >I'm new</a></p>
+            
+                    {
+                        props.errorLogged &&
+                        <div>
+                            <p className="subTexto">Las credenciales no son correctas</p>
+                        </div>
+                    }
             </form>
-            {
-                props.errorLogged &&  
-                    <div>
-                        <h2>Las credenciales no son correctas</h2>
-                    </div>
-            }
-        </section>
+            
+                </div>
+            </div>
     )
 
 };
