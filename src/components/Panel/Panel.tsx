@@ -92,8 +92,7 @@ export class Panel extends React.Component<Props, State> {
                         <button type="submit btnLogin btnLogin-block btnLogin-large">Add Review</button>
                     </form>
 
-
-                    {<Tasks {...this.state.tasks}/>}
+                    {this.renderTasks()}
                 </div>
             </section>
         )
