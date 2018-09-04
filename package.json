@@ -21,6 +21,7 @@
   "dependencies": {
     "@types/react": "^16.3.14",
     "@types/react-dom": "^16.0.5",
+    "@types/react-router": "^4.0.30",
     "core-js": "^2.5.7",
     "raf": "^3.4.0",
     "react": "^16.4.0",

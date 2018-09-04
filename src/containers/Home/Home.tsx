@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Panel from '../Panel/Panel';
-/* import Projects from '../Projects/Projects'; */
+import Panel from '../../components/Panel/Panel';
+
 
 interface Props {
     writer: string;
@@ -14,7 +14,7 @@ interface Props {
     goToLoggin: any
 }
 
-const Home = (props: Props) => {
+export const Home = (props: Props) => {
 
     return <div className='container'>
              <div className="row">
@@ -147,5 +147,3 @@ const Home = (props: Props) => {
             </div>
 
 };
-
-export default Home;
