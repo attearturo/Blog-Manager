@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Tasks from '../Panel/Tasks';
 
+
 interface Props { }
 
 interface State {
@@ -17,7 +18,6 @@ interface ITask {
     value: string;
     completed: boolean;
 }
-
 export class Panel extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
@@ -25,6 +25,7 @@ export class Panel extends React.Component<Props, State> {
             currentTask: "",
             tasks: []
         }
+
     }
 
     handleSubmit = (event: any) => {
@@ -42,6 +43,7 @@ export class Panel extends React.Component<Props, State> {
                     code: '',
                     calification: '',
                     area: '',
+                    
                     
                 }
             ]

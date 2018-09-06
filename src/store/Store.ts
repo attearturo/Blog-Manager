@@ -5,13 +5,20 @@ class Store {
 
     @observable user: any = null;
 
-    @action setUser( username:string, password:string){
+    @action setUser(nickname: string, username:string, password:string){
         this.user = {
+            nickname: nickname,
             name:username,
             password:password,
-            logged:false
         }
     }
+
+    @action setLogged(logged: boolean) {
+        this.user = {
+            logged: false
+        }
+    }
+
 
 }
 

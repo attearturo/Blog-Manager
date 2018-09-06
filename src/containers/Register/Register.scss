@@ -540,3 +540,7 @@ mark {
   color: white;
   background: rgba(0, 0, 0, 0.25);
 }
+
+.mark, mark {
+    background-color: transparent;
+}

@@ -4,8 +4,8 @@ import { BrowserRouter as Router,
         Link, Route } from 'react-router-dom';
 
 import './Root.scss';
-import '../../components/Register/Register.scss';
-import Register from '../../components/Register/Register';
+import '../Register/Register.scss';
+import { Register } from '../Register/Register';
 import { Login } from '../Login/Login';
 import { Home } from '../Home/Home';
 
@@ -21,6 +21,7 @@ interface IProps {}
             <div>
                 <Route path="/" exact component={Login}/>
                 <Route path="/home" exact component={Home} />
+                <Route path="/register" exact component={Register} />
             </div>    
     
         </Router> 

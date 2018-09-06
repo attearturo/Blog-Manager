@@ -4,19 +4,26 @@ import { withRouter } from 'react-router';
 
 import { store } from '../../store/Store';
 
-export const Login = observer (withRouter((props) => {
+interface IProps {
+    errorLogged : boolean;
+}
+
+export const Login = observer (withRouter((props, IProps) => {
     return  <div id="login" className='landing'>
                 <div id="bodyLogin">
 
-                    <form className='login' onSubmit ={(evento) => {
-                        evento.preventDefault();
-                        let form : any = evento.target;
-                        store.setUser(form.user.value, form.pass.value);
-
-                        //Ir a Home
-                        props.history.push('/home');
+                   
+                <form className='login' onSubmit ={(evento) => {
+    
+                evento.preventDefault();
+                let form: any = evento.target;
+                console.log(form.user.value, form.pass.value)
+                store.setUser("Sebastian Gaviria", form.user.value, form.pass.value);
+                // ir al dashboard
+                props.history.push('/home');
+                        
                     }}>
-                    
+                        
                     <h4 className='subHeader'>Welcome back!</h4>
                     <input type="email" name='user' placeholder="Email" required />
                     <input type="password" name='pass' placeholder="Password" required />
@@ -26,8 +33,7 @@ export const Login = observer (withRouter((props) => {
                         className="registro" 
                         href='#' 
                         onClick={(evento) => {props.history.push('/register')}}
-                        >I'm new</a></p>
-                    
+                        >I'm new</a></p>  
                     </form>
                 </div>
             </div>
